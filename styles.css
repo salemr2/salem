@@ -476,6 +476,8 @@ section {
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    animation: none !important;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 /* تنسيق النص المزخرف */
@@ -1099,9 +1101,7 @@ p, .text-content {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient-animation 10s ease infinite,
-             float-animation 3s ease-in-out infinite,
-             text-glow 2s ease-in-out infinite;
+    animation: none; /* إيقاف الحركة السابقة */
     text-shadow: 0 0 20px rgba(33, 150, 243, 0.5);
 }
 
@@ -1379,4 +1379,21 @@ p, .text-content {
 /* تقليل استخدام الظلال */
 .btn:hover {
     transform: translateY(-2px);
+}
+
+/* إضافة ستايل جديد مبسط */
+.welcome-title {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.welcome-title:hover {
+    transform: translateY(-5px);
+}
+
+.welcome-title i {
+    color: var(--accent-color);
+    margin-left: 10px;
 }
